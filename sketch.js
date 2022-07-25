@@ -125,21 +125,27 @@ function draw() {
     status.hide()
     accZTxt.show()
     if(floor(max(valuesX))>floor(max(valuesZ))){
-        accZTxt.html(floor(max(valuesX))+" m/s^2")
+        accZTxt.html(floor(max(valuesX)))
+        t = (valuesX.length-deltaTime)/frames
+    velocity = floor(max(valuesX))*t
+    velocityTxt.html(floor(velocity)+" m/s")
+  
+    F = floor(max(valuesX))*weight
+    newtons.html(F+" N")
     }
     else{
     accZTxt.html(floor(max(valuesZ))+ " m/s^2")
-    }
+    
     t = (valuesZ.length-deltaTime)/frames
     velocity = floor(max(valuesZ))*t
     velocityTxt.html(floor(velocity)+" m/s")
   
     F = floor(max(valuesZ))*weight
     newtons.html(F+" N")
+    }
     if(resetCounter == 1){
       resetCounter = 2
         
-     
     }
   }
 }
