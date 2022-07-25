@@ -44,7 +44,7 @@ function setup() {
 function almostStartTest(){
   if(inp.value()!=""){
   weight = int(inp.value())
-  
+  console.log(weight)
   lab.hide()
   inp.hide()
   btStart.hide()
@@ -66,7 +66,7 @@ function almostStartTest(){
   newtons.class("important-txt")
   
   resetCounter += 1
-  
+  console.log("resetcounter = "+resetCounter)
   }
   else{
     lab.html("Didn't Input Weight!")
@@ -89,7 +89,7 @@ function doubleClicked() {
 function mouseClicked() {
   if(counter>0){
     counter += 1
-    
+    console.log(counter)
   }
 }
 
@@ -98,7 +98,7 @@ function draw() {
     if(resetCounter==2){
       valuesZ = [0]
       resetCounter = 1
-      
+      console.log("oh")
     }
     status.hide()
     velocityTxt.html("")
@@ -106,7 +106,7 @@ function draw() {
     accZTxt.show()
     
     valuesZ.push(accelerationZ)
-    
+    console.log(valuesZ)
     accZTxt.html("Recording... THROW A PUNCH!")
     
   }
@@ -120,7 +120,8 @@ function draw() {
     newtons.html("Force: "+F+" N")
     if(resetCounter == 1){
       resetCounter = 2
-      
+      console.log("resetcounter = "+resetCounter)   
+      console.log(valuesZ)
     }
   }
 }
