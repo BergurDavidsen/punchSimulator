@@ -31,13 +31,13 @@ html, body {
     cursor: pointer;
     display: inline-block;
     font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
-    font-size: 50%;
+    font-size: 40%;
     font-weight: 800;
     line-height: 16px;
     min-height: 40px;
     outline: 0;
-    width: 13%;
-    height: 5%;
+    width: 6%;
+    height: 3%;
     padding: 12px 14px;
     text-align: center;
     text-rendering: geometricprecision;
@@ -108,21 +108,18 @@ html {
 }
 
 body {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   width: 100vw;
   height: 100vh;
   color: #455A64;
-  background-color: #8d8f7c9a;
+  background-color:goldenrod;
   font-family: var(--fontFamily);
   font-size: var(--inputFontSize);
   line-height: var(--lineHeightMd);
-  background-image: url("https://images.pexels.com/photos/6739946/pexels-photo-6739946.jpeg?cs=srgb&dl=pexels-mikhail-nilov-6739946.jpg&fm=jpg");
-    background-repeat: no-repeat;
-  
-  background-size: 100% 100%;
+ 
 }
 
 
@@ -147,12 +144,12 @@ Input {
 }
 
 .Input-text {
-  display: block;
+  display: flex;
   margin: 2%;
   padding: var(--inputPaddingV) var(--inputPaddingH);
   color: inherit;
-  width: 15%;
-  height: 5%;
+  width: 10%;
+  height: 4%;
   font-family: inherit;
   font-size: var(--inputFontSize);
   font-weight: inherit;
@@ -190,11 +187,13 @@ Input {
     
   }
   #label{
-    font-size: 100%;
+    display: inline-block;
+    font-size: 80%;
     color: #ffffff;
   }
+  
   #status{
-    font-size: 100%;
+    font-size: 80%;
     text-align: center;
     color:#ffffff
   }
