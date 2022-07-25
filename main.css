@@ -21,7 +21,7 @@ html, body {
   
     
   /* CSS */
-  .button {
+  #button {
     background: #FF4742;
     border: 1px solid #211D1D;
     border-radius: 6px;
@@ -35,10 +35,11 @@ html, body {
     font-weight: 800;
     line-height: 16px;
     min-height: 40px;
-    margin: 1%;
+    margin-left: 44%;
+    margin-top: 1%;
     outline: 0;
-    width: 6%;
-    height: 3%;
+    width: 12%;
+    height: 5%;
     padding: 12px 14px;
     text-align: center;
     text-rendering: geometricprecision;
@@ -49,14 +50,14 @@ html, body {
     vertical-align: middle;
   }
   
-  .button:hover,
-  .button:active {
+  #button:hover,
+  #button:active {
     background-color: initial;
     background-position: 0 0;
     color: #FF4742;
   }
   
-  .button:active {
+  #button:active {
     opacity: .5;
   }
   @import url('https://fonts.googleapis.com/css?family=Dosis');
@@ -144,13 +145,14 @@ Input {
   position: relative;
 }
 
-.Input-text {
-  display: flex;
-  margin: 1%;
+#Input-text {
+  display: block;
+  margin-left: 40%;
+  margin-top: 0.5%;
   padding: var(--inputPaddingV) var(--inputPaddingH);
   color: inherit;
-  width: 10%;
-  height: 4%;
+  width: 20%;
+  height: 5%;
   font-family: inherit;
   font-size: var(--inputFontSize);
   font-weight: inherit;
@@ -161,21 +163,12 @@ Input {
   color: #211D1D;
 }
 
-.Input-text::placeholder {
+#Input-text::placeholder {
   color: #B0BEC5;
 }
 
-
-
-
-
-
-
-    
-  
-  .important-txt{
+.important-txt{
     display: inline-block;
-    
     height: 100px;
     display: flex;
     font-size: 100%;
@@ -184,20 +177,33 @@ Input {
     padding-left: 2%;
     background-clip: text;
     color: rgba(255, 255, 255);
-    margin-top: 3%;
+    margin-top: 4%;
+    margin-left: 44%;
     text-shadow: 1px 1px 0px #D2D2D247;
-   
     
   }
+  
   #label{
     display: inline-block;
-    margin: 1%;
-    font-size: 80%;
+    margin-top: 2%;
+    margin-left: 40%;
+    font-size: 90%;
     color: #ffffff;
   }
+  #instructions{
+    font-size: 80%;
+    margin-top: 7%;
+    margin-left: 25%;
+    
+    color:#ffffff
+  }
+  
+  
   
   #status{
     font-size: 80%;
+    margin-top: 7%;
+    margin-left: 40%;
     
     color:#ffffff
   }
