@@ -23,14 +23,15 @@ let timer;
 function setup() {
   noCanvas()
   frameRate(frames)
-  lab = createP("Input Weight in kg (Only works on mobile): ")
+  lab = createP("Input Weight (kg):")
   lab.id("label")
+  
   
   inp = createInput("","number")
   inp.id("weight")
   inp.class("Input-text")
   
-  btStart = createButton("Go To The Punch-Ometer")
+  btStart = createButton("Proceed")
   btStart.class("button")
   btStart.mousePressed(almostStartTest)
   reject = createP("")
@@ -111,13 +112,13 @@ function draw() {
     
   }
   if(counter%2==0 && counter>=4){
-    accZTxt.html("Acceleration: "+floor(max(valuesZ))+ " m/s^2")
+    accZTxt.html(floor(max(valuesZ))+ " m/s^2")
     t = (valuesZ.length-deltaTime)/frames
     velocity = floor(max(valuesZ))*t
-    velocityTxt.html("Speed:"+floor(velocity)+" m/s")
+    velocityTxt.html(floor(velocity)+" m/s")
   
     F = floor(max(valuesZ))*weight
-    newtons.html("Force: "+F+" N")
+    newtons.html(F+" N")
     if(resetCounter == 1){
       resetCounter = 2
       console.log("resetcounter = "+resetCounter)   
