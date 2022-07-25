@@ -23,16 +23,19 @@ let timer;
 function setup() {
   noCanvas()
   frameRate(frames)
-  lab = createP("Input Weight (kg):")
+  lab = createP("Input Weight (kg):"+"\n")
   lab.id("label")
+  lab.class("start")
   
   
   inp = createInput("","number")
-  inp.id("weight")
-  inp.class("Input-text")
+  
+  inp.id("Input-text")
+  inp.class("start")
   
   btStart = createButton("Proceed")
-  btStart.class("button")
+  btStart.id("button")
+  btStart.class("start")
   btStart.mousePressed(almostStartTest)
   reject = createP("")
   resetCounter = 0
@@ -45,7 +48,7 @@ function setup() {
 function almostStartTest(){
   if(inp.value()!=""){
   weight = int(inp.value())
-  console.log(weight)
+ 
   lab.hide()
   inp.hide()
   btStart.hide()
@@ -57,7 +60,9 @@ function almostStartTest(){
   
 
   
-  status = createP("Press Screen Once To Start Recording Punch and Press Again When Done. Double-click The Screen To Reset Test.")
+  instructions = createP("Press Screen Once To Start Recording Punch and Press Again When Done. Double-click The Screen To Reset Test.")
+  instructions.id("instructions")
+  status = createP("")
   status.id("status")
   accZTxt = createP("")
   accZTxt.class("important-txt")
@@ -67,7 +72,7 @@ function almostStartTest(){
   newtons.class("important-txt")
   
   resetCounter += 1
-  console.log("resetcounter = "+resetCounter)
+  
   }
   else{
     lab.html("Didn't Input Weight!")
@@ -90,7 +95,7 @@ function doubleClicked() {
 function mouseClicked() {
   if(counter>0){
     counter += 1
-    console.log(counter)
+    
   }
 }
 
@@ -99,19 +104,23 @@ function draw() {
     if(resetCounter==2){
       valuesZ = [0]
       resetCounter = 1
-      console.log("oh")
+      
     }
-    status.hide()
+    instructions.hide()
+    status.show()
+    status.html("Recording... THROW A PUNCH!")
     velocityTxt.html("")
     newtons.html("")
     accZTxt.show()
     
     valuesZ.push(accelerationZ)
-    console.log(valuesZ)
-    accZTxt.html("Recording... THROW A PUNCH!")
+    
+    accZTxt.hide()
     
   }
   if(counter%2==0 && counter>=4){
+    status.hide()
+    accZTxt.show()
     accZTxt.html(floor(max(valuesZ))+ " m/s^2")
     t = (valuesZ.length-deltaTime)/frames
     velocity = floor(max(valuesZ))*t
@@ -121,8 +130,8 @@ function draw() {
     newtons.html(F+" N")
     if(resetCounter == 1){
       resetCounter = 2
-      console.log("resetcounter = "+resetCounter)   
-      console.log(valuesZ)
+        
+     
     }
   }
 }
