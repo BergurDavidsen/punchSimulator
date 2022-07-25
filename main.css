@@ -31,16 +31,16 @@ html, body {
     cursor: pointer;
     display: inline-block;
     font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
-    font-size: 40%;
+    font-size: 50%;
     font-weight: 800;
     line-height: 16px;
     min-height: 40px;
-    margin-left: 44%;
+    margin-left: 41%;
     margin-top: 1%;
     outline: 0;
-    width: 12%;
+    width: 14%;
     height: 5%;
-    padding: 12px 14px;
+    padding: 0px 0px;
     text-align: center;
     text-rendering: geometricprecision;
     text-transform: none;
@@ -147,12 +147,12 @@ Input {
 
 #Input-text {
   display: block;
-  margin-left: 40%;
+  margin-left: 38%;
   margin-top: 0.5%;
   padding: var(--inputPaddingV) var(--inputPaddingH);
   color: inherit;
   width: 20%;
-  height: 5%;
+  height: 6%;
   font-family: inherit;
   font-size: var(--inputFontSize);
   font-weight: inherit;
@@ -177,8 +177,8 @@ Input {
     padding-left: 2%;
     background-clip: text;
     color: rgba(255, 255, 255);
-    margin-top: 4%;
-    margin-left: 44%;
+    margin-top: 8%;
+    margin-left: 42%;
     text-shadow: 1px 1px 0px #D2D2D247;
     
   }
@@ -186,14 +186,14 @@ Input {
   #label{
     display: inline-block;
     margin-top: 2%;
-    margin-left: 40%;
-    font-size: 90%;
+    margin-left: 38%;
+    font-size: 70%;
     color: #ffffff;
   }
   #instructions{
     font-size: 80%;
     margin-top: 7%;
-    margin-left: 25%;
+    margin-left: 18%;
     
     color:#ffffff
   }
@@ -203,7 +203,7 @@ Input {
   #status{
     font-size: 80%;
     margin-top: 7%;
-    margin-left: 40%;
+    margin-left: 30%;
     
     color:#ffffff
   }
