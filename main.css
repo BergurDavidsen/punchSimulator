@@ -35,7 +35,7 @@ html, body {
     font-weight: 800;
     line-height: 16px;
     min-height: 40px;
-    margin-left: 38%;
+    margin-left: 39%;
     margin-top: 1%;
     outline: 0;
     width: 16%;
@@ -147,11 +147,11 @@ Input {
 
 #Input-text {
   display: block;
-  margin-left: 35%;
+  margin-left: 37%;
   margin-top: 0.5%;
   padding: var(--inputPaddingV) var(--inputPaddingH);
   color: inherit;
-  width: 22%;
+  width: 25%;
   height: 6%;
   font-family: inherit;
   font-size: var(--inputFontSize);
