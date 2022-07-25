@@ -125,7 +125,7 @@ function draw() {
     status.hide()
     accZTxt.show()
     if(floor(max(valuesX))>floor(max(valuesZ))){
-        accZTxt.html(floor(max(valuesX)))
+        accZTxt.html(floor(max(valuesX))+" m/s^2")
     }
     else{
     accZTxt.html(floor(max(valuesZ))+ " m/s^2")
