@@ -125,7 +125,7 @@ function draw() {
     status.hide()
     accZTxt.show()
     if(floor(max(valuesX))>floor(max(valuesZ))){
-        accZTxt.html(floor(max(valuesX)))
+        accZTxt.html(floor(max(valuesX))+" m/s^2")
         t = (valuesX.length-deltaTime)/frames
     velocity = floor(max(valuesX))*t
     velocityTxt.html(floor(velocity)+" m/s")
