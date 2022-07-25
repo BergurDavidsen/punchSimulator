@@ -6,6 +6,7 @@ let intructions;
 let accZTxt;
 let accZ;
 let valuesZ = [0]
+let valuesX = [0]
 let status;
 let t;
 let testBt;
@@ -103,6 +104,7 @@ function draw() {
   if(counter%2!=0 && counter>2){
     if(resetCounter==2){
       valuesZ = [0]
+      valuesX = [0]
       resetCounter = 1
       
     }
@@ -114,6 +116,7 @@ function draw() {
     accZTxt.show()
     
     valuesZ.push(accelerationZ)
+    valuesX.push(accelerationX)
     
     accZTxt.hide()
     
@@ -121,7 +124,12 @@ function draw() {
   if(counter%2==0 && counter>=4){
     status.hide()
     accZTxt.show()
+    if(floor(max(valuesX))>floor(max(valuesZ))){
+        accZTxt.html(floor(max(valuesX)))
+    }
+    else{
     accZTxt.html(floor(max(valuesZ))+ " m/s^2")
+    }
     t = (valuesZ.length-deltaTime)/frames
     velocity = floor(max(valuesZ))*t
     velocityTxt.html(floor(velocity)+" m/s")
