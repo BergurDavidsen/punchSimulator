@@ -1,0 +1,203 @@
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+  canvas {
+    display: block;
+  }
+    .txt {
+      height: 200px;
+      display: inline-block;
+      font-size: 50px;
+      line-height: 84%;
+      font-family: Modak;
+      padding-left: 20%;
+      background-clip: text;
+      color: rgba(0,0,0,0.97);
+      margin-top: calc(50vh - 100px);
+      text-shadow: 5px 5px 0px #D2D2D247;
+  
+  }
+  
+    
+  /* CSS */
+  .button {
+    background: #FF4742;
+    border: 1px solid #211D1D;
+    border-radius: 6px;
+    box-shadow: rgba(0#534847 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 16px;
+    min-height: 40px;
+    outline: 0;
+    width: 15%;
+    height: 10%;
+    padding: 12px 14px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+  }
+  
+  .button:hover,
+  .button:active {
+    background-color: initial;
+    background-position: 0 0;
+    color: #FF4742;
+  }
+  
+  .button:active {
+    opacity: .5;
+  }
+  @import url('https://fonts.googleapis.com/css?family=Dosis');
+
+:root {
+  /* generic */
+  --gutterSm: 0.4rem;
+  --gutterMd: 0.8rem;
+  --gutterLg: 1.6rem;
+  --gutterXl: 2.4rem;
+  --gutterXx: 7.2rem;
+  --colorPrimary400: #7e57c2;
+  --colorPrimary600: #5e35b1;
+  --colorPrimary800: #4527a0;
+  --fontFamily: "Dosis", sans-serif;
+  --fontSizeSm: 1.2rem;
+  --fontSizeMd: 1.6rem;
+  --fontSizeLg: 2.1rem;
+  --fontSizeXl: 2.8rem;
+  --fontSizeXx: 3.6rem;
+  --lineHeightSm: 1.1;
+  --lineHeightMd: 1.8;
+  --transitionDuration: 300ms;
+  --transitionTF: cubic-bezier(0.645, 0.045, 0.355, 1);
+  
+  /* floated labels */
+  --inputPaddingV: var(--gutterMd);
+  --inputPaddingH: var(--gutterLg);
+  --inputFontSize: 2.0rem;
+  --inputLineHeight: var(--lineHeightMd);
+  --labelScaleFactor: 0.8;
+  --labelDefaultPosY: 50%;
+  --labelTransformedPosY: calc(
+    (var(--labelDefaultPosY)) - 
+    (var(--inputPaddingV) * var(--labelScaleFactor)) - 
+    (var(--inputFontSize) * var(--inputLineHeight))
+  );
+  --inputTransitionDuration: var(--transitionDuration);
+  --inputTransitionTF: var(--transitionTF);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  color: #455A64;
+  background-color: #8d8f7c9a;
+  font-family: var(--fontFamily);
+  font-size: var(--inputFontSize);
+  line-height: var(--lineHeightMd);
+  background-image: url("https://images.pexels.com/photos/6739946/pexels-photo-6739946.jpeg?cs=srgb&dl=pexels-mikhail-nilov-6739946.jpg&fm=jpg");
+    background-repeat: no-repeat;
+  
+  background-size: 100% 100%;
+}
+
+
+.Wrapper {
+  flex: 0 0 80%;
+  max-width: 80%;
+}
+
+.Title {
+  margin: 0 0 var(--gutterXx) 0;
+  padding: 0;
+  color: #fff;
+  font-size: var(--fontSizeXx);
+  font-weight: 400;
+  line-height: var(--lineHeightSm);
+  text-align: center;
+  text-shadow: -0.1rem 0.1rem 0.2rem var(--colorPrimary800);
+}
+
+Input {
+  position: relative;
+}
+
+.Input-text {
+  display: block;
+  margin: 2%;
+  padding: var(--inputPaddingV) var(--inputPaddingH);
+  color: inherit;
+  width: 20%;
+  height: 5%;
+  font-family: inherit;
+  font-size: var(--inputFontSize);
+  font-weight: inherit;
+  line-height: var(--inputLineHeight);
+  border: none;
+  border-radius: 0.4rem;
+  transition: box-shadow var(--transitionDuration);
+  color: #211D1D;
+}
+
+.Input-text::placeholder {
+  color: #B0BEC5;
+}
+
+
+
+
+
+
+
+    
+  
+  .important-txt{
+    text-align: center;
+    height: 100px;
+    display: flex;
+    font-size: 50px;
+    line-height: 5%;
+    font-family: Modak;
+    padding-left: 2%;
+    background-clip: text;
+    color: rgba(255, 255, 255);
+    margin-top: 3%;
+    text-shadow: 1px 1px 0px #D2D2D247;
+    
+  }
+  #label{
+    font-size: 40px;
+    color: #ffffff;
+  }
+  #status{
+    font-size: 40px;
+    text-align: center;
+    color:#ffffff
+  }
+    
+  
+  
